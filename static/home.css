@@ -1,0 +1,268 @@
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Righteous'), local('Righteous-Regular'),
+       url('fonts/Righteous/righteous-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/Righteous/righteous-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/comfortaa-v19-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Comfortaa Regular'), local('Comfortaa-Regular'),
+       url('fonts/Comforta/comfortaa-v19-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Comforta/comfortaa-v19-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/Comforta/comfortaa-v19-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Comfortacomfortaa-v19-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Comforta/comfortaa-v19-latin-regular.svg#Comfortaa') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Itim';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/itim-v3-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Itim'), local('Itim-Regular'),
+       url('fonts/Itim/itim-v3-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Itim/itim-v3-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/Itim/itim-v3-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Itim/itim-v3-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Itim/itim-v3-latin-regular.svg#Itim') format('svg'); /* Legacy iOS */
+}
+
+
+/* ubuntu-regular - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ubuntu-v13-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
+       url('../fonts/ubuntu-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ubuntu-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ubuntu-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ubuntu-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ubuntu-v13-latin-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
+
+
+
+nav a {
+    color: #FFF;
+}
+
+nav a:hover{
+    background-color:transparent;
+    text-shadow: 1px 1px 1px;
+}
+
+nav a:focus{
+    background-color:#FFF;
+    color:black;
+}
+
+.navbar-brand{
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight:700;
+    font-size:2em;
+}
+
+.nav-item{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.welcome{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 900;
+    font-size:3em;
+    color:#FFF;
+    opacity: 0.7;
+}
+
+.nav-item  a:hover{
+    color: black;
+    border-bottom: 0.45em solid #ADADAD;
+    background-color:white;
+
+    -webkit-transition: all 15ms ease-in-out;
+    -moz-transition: all 15ms ease-in-out;
+    -ms-transition: all 15ms ease-in-out;
+    -o-transition: all 15ms ease-in-out;
+     transition: all 15ms ease-in-out;
+}
+
+body{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+}
+
+section#fullview {
+    background-image: url('images/large.png');
+    background-size: cover;
+    height:40em;
+    padding-bottom:20%;
+}
+.jumbotron{
+    border-radius:0;
+}
+.background-top img {
+    height:8em;
+    width:100%;
+    opacity: 0.7;
+}
+.rowe{
+    padding-top:2em;
+    padding-bottom:2em;
+}
+
+.rowey{
+    margin-top:-12em;
+}
+.cardy  .card-body > p,
+.cardy  .card-body > h5{
+    margin-top:2em;
+}
+.nav-text{
+    padding-top:6em;
+}
+
+.do {
+    border:solid;
+    border-radius:50%;
+    padding:5em;
+    border-width:0.5em;
+    margin-left:0.2em;
+    margin-right:0.2em;
+    width:70%;
+}
+
+.long p {
+    padding-top:5em;
+    padding-bottom:2em;
+}
+
+h2{
+    font-color: #5185f3;
+}
+
+footer {
+    background-color: #191919;
+    color: #ADADAD;
+    margin-top:-20px;
+}
+footer h5,
+footer img {
+    margin-top: 3em;
+    font-weight: bold;
+}
+
+footer ul {
+    margin-bottom: 3em;
+}
+footer a {
+    font-weight: 300;
+    color: #5A5A5A;
+}
+footer a:hover {
+    text-decoration: none;
+    color: #FFF;
+}
+.cols{
+    padding-left:3.5em;
+}
+.cham{
+    padding-top:8em;
+}
+
+.btn-info{
+    background-color:#FFF;
+    border-radius:0%;
+    width:10em;
+    margin-top:3em;
+    margin-bottom:4em;
+    border: 0.6em solid #5185f3;
+}
+.btn-info:hover{
+    background-color:#5185f3;
+    border: 0.5em solid #FFF;
+    color:#FFF;
+    font-color:#FFF;
+}
+
+.btn-sm{
+    border-radius:0%;
+    width:10em;
+    margin-left:6em;
+    margin-top:2em;
+    margin-bottom:2em;
+    background-color:#FFF;
+    border:solid #5185f3;
+}
+
+.about > p {
+    padding-top:4em;
+    padding-bottom:4em;
+}
+
+.card-header > img {
+    height:100%;
+    width:100%;
+
+}
+.card-img-top {
+border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.cardy {
+    position: relative;
+    border: 0.4em solid #5185f3;
+    border-radius: 0.4rem;
+    position: relative;
+    background-color: #FFF;
+    height: 25em;
+    opacity:0.83;
+}
+
+.cardy  .head{
+    opacity:0.7;
+}
+
+.bingo{
+    height:30%;
+    width:30%;
+
+}
+footer .fab,
+footer .icon {
+    margin-right:1em;
+}
+
+.bing{
+    height:60%;
+    width:80%;
+    margin-top:2em;
+}
+.bingy {
+    height:70%;
+    width:80%;
+    margin-left:6em;
+}
+
+.edit{
+    padding-left:1.4em;
+    color:#FFF;
+    opacity:0.9;
+    font-size: 1.3em;
+    font-family:"Comfortaa";
+}
+
+
+

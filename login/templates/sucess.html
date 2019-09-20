@@ -1,0 +1,87 @@
+{% extends "home.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block custom %}
+    <link href="{% static "details.css" %}" rel="stylesheet"></link>
+    <title>SignUp Sucessful!</title>
+    {% endblock %}
+
+
+    {% block nav %}
+    <nav class="navbar navbar-expand-lg bg-dark" id="ftco-navbar">
+            <div class="container">
+              <a class="navbar-brand" href="/home"><span>Chambua</span></a>
+              <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+              </button>
+
+              <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+                  <li class="nav-item"><a href="{% url 'home' %}" class="nav-link" data-nav-section="home"><span><i class="fas fa-home icon"></i>Home |</span></a></li>
+                  <li class="nav-item"><a href="{% url 'submit' %}" class="nav-link" data-nav-section="about"><span><i class="fas fa-sticky-note"></i></i>Submission |</span></a></li>
+                  <li class="nav-item"><a href="{% url 'see' %}" class="nav-link" data-nav-section="projects"><span><i class="fas fa-poll"></i>Results |</span></a></li>
+                  <li class="nav-item"><a href="#" class="nav-link" data-nav-section="team"><span><i class="fas fa-phone icon"></i>Contact Us</span></a></li>
+
+                </ul>
+              </div>
+            </div>
+    </nav>
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 sucess"> <h3 class="text-center">SUCCESS!</h3></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-pad design">
+                            <div class="col-md-4 offset-md-4 text-center">
+                                <i class="fas fa-check-circle fa-4x"></i>
+                            </div>
+                        </div>
+
+                        <div class="card-body text-center">
+                            <h4>Thanks for joining Us</h4>
+                            <div class="row text-center">
+                                <div class="col-md-4 text-center">
+                                    <div class="sucess-card text-center">
+                                        <p class="withiny"> <b>{{ user.name }}</b></p>
+                                    </div>
+                                    <h5><b>INSTITUTION NAME</b></h5>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <div class="sucess-card text-center">
+                                        <p class="within"> <b>{{ user.institution_id }}</b></p>
+                                    </div>
+                                    <h5><b>INSTITUTION ID</b></h5>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <div class="sucess-card text-center">
+                                        <p class="within"><b>********</b></p>
+                                    </div>
+                                    <h5><b>PASSWORD</b></h5>
+                                </div>
+                            </div>
+                            <p>*Use the assigned Institution Id for logging into your account</p>
+                            <hr>
+                        </div>
+                        <div class="card-header card-pad design text-center">
+                            <button class="img-thumbnail"><a href="{% url 'login' %}">Proceed to login</a></button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+</body>
+</html>

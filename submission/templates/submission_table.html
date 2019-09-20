@@ -1,0 +1,78 @@
+{% extends "sucess.html" %}
+{% load plotly_dash %}
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    {% block custom %}
+    <link href="{% static "custom.css" %}" rel="stylesheet"></link>
+    <title>Submission</title>
+    {% endblock %}
+
+</head>
+<body>
+    {% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <br><br><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+
+                    <form class="main_form" action="" method="post">
+                        <div class="card">
+                            <div class="card-header"> Submission form</div>
+                            <div class="card-body">
+                                <div class="form-row">
+                                {% for field in form %}
+
+                                    <div class="form-group dj-forms col-md-3">
+                                        {{ field|as_crispy_field }}
+                                    </div>
+                                {% endfor %}
+
+                                </div>
+
+                                {% plotly_app name="submission_table" ratio=0.67%}
+                            </div>
+                        </div><br>
+                        <div class="card">
+                            <div class="card-header"> Teacher form</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        {{ teacher.Mathematics|as_crispy_field }}
+                                        {{ teacher.Physics|as_crispy_field }}
+                                        {{ teacher.Geography|as_crispy_field }}
+                                        {{ teacher.CRE|as_crispy_field }}
+                                    </div>
+                                    <div class="col-md-4">
+                                        {{ teacher.English|as_crispy_field }}
+                                        {{ teacher.Chemistry|as_crispy_field }}
+                                        {{ teacher.History|as_crispy_field }}
+                                        {{ teacher.French|as_crispy_field }}
+                                    </div>
+                                    <div class="col-md-4">
+                                        {{ teacher.Kiswahili|as_crispy_field }}
+                                        {{ teacher.Biology|as_crispy_field }}
+                                        {{ teacher.Business|as_crispy_field }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <button class="btn-block ">Submit</button>
+                        {% csrf_token %}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+
+</body>
+
+</html>

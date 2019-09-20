@@ -1,0 +1,79 @@
+{% extends "sucess.html" %}
+
+<!DOCTYPE html>
+{% load static %}
+{% load plotly_dash %}
+<html lang="en">
+<head>
+    {% block custom %}
+    <link href="{% static "custom1.css" %}" rel="stylesheet"></link>
+    <link href="{% static "details.css" %}" rel="stylesheet"></link>
+    <title>Subject Rankings</title>
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-12">
+                <div class="card first fir">
+                    <div class="card-header card-pad">
+                        <h5>Subject Rankings  <i class="fas fa-signal"></i></h5>
+                    </div>
+                    <div class="card-body">
+                        {% plotly_app name="subj_interactive" ratio=0.4 %}
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card ">
+                    <div class="card-header card-pad design">
+                        <h5>Teacher Rankings</h5>
+                    </div>
+                    <div class="card-body">
+                        {% plotly_app name="teacher" ratio=0.27 %}
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="card fir">
+                    <div class="card-header card-pad design">
+                        <h5 >Findings</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>1. Students with good grades in Chemistry have a better grades in  {{ chem }} </p>
+                        <p>2. Students with good grades in English have a higher chance of passing in {{ eng }} </p>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-md-12">
+               <div class="card ">
+                   <div class="card-header card-pad design">
+                       <h5>Reccommendations</h5>
+                   </div>
+                   <div class="card-body">
+                        <h5> Areas to work on </h5>
+
+                        <ul class="list-unstyled">
+                            <li> 1. {{ weight3 }}</li>
+                            <li> 2. {{ weight4 }} </li>
+                        </ul>
+
+                   </div>
+               </div>
+            </div>
+
+        </div><br>
+
+    </div>
+    {% endblock %}
+</body>
+</html>

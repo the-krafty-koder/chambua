@@ -1,0 +1,12 @@
+.formy{
+    width:5em;
+    padding-left:5em;
+    background-color: "blue";
+}
+
+.submit_btn{
+    background-color:"blue";
+}
+
+background: rgba(0,0,0,5) url('../images/background.jpg') no-repeat;
+background-image:url('../images/background.jpg');

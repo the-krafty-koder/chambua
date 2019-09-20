@@ -1,0 +1,23 @@
+.card-header{
+    background-color:#5185f3;
+}
+
+button{
+    background-color:#FFF;
+    border:solid #5185f3;
+    height:35px;
+}
+button:hover{
+    box-shadow:10px 10px 10px #ADADAD;
+    background-color:#5185f3;
+    border-width:5px;
+}
+
+form{
+    padding:2.5em;
+
+}
+
+.card{
+    margin-bottom:2em;
+}

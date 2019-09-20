@@ -1,0 +1,158 @@
+{% extends "sucess.html" %}
+{% load static %}
+{% load plotly_dash %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block custom %}
+    <link href="{% static "custom1.css" %}" rel="stylesheet"></link>
+    <link href="{% static "details.css" %}" rel="stylesheet"></link>
+    <title>Results</title>
+    {% endblock %}
+</head>
+<body onload="myFunction()" style="margin:0;">
+    {% block body %}
+    <div id="loader"></div>
+    <div class="container" id="display_body" >
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 float-right">
+                <div class="card"></div>
+                {% plotly_app name="dropdown" ratio=0.25%}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header card-pad design">
+                        <h5>Grade Distribution</h5>
+                    </div>
+                {% plotly_app name="donut" ratio=2 %}
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="card">
+                    <div class="card-header card-pad design">
+                        <h5>Grade Count</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <h5>Grade</h5>
+                                <ul class="">
+                                    <li>A</li>
+                                    <li>B</li>
+                                    <li>C</li>
+                                    <li>D</li>
+                                    <li>E</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <h5>Grade Count</h5>
+                                <ul class="list-unstlyed">
+                                    <li>{{ gradeA }}</li>
+                                    <li>{{ gradeB }}</li>
+                                    <li>{{ gradeC }}</li>
+                                    <li>{{ gradeD }}</li>
+                                    <li>{{ gradeE }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        </ul>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-5 text-center">
+                        <div class="card this img-thumbnail">
+                            <br><br><p><b>Strengths :</b><br><br>{{ weight1 }}, {{ weight2 }} </p><br><br>
+                            <p><b>Weaknesses :</b><br><br> {{ weight3 }}, {{ weight4 }}</p><br><br><br>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-header card-pad design">Subject Rankings</div>
+                            <div class="card-body">
+                                <ul class="list-inline list-unstyled">
+                                    <li><b>1: </b>{{ high1 }}</li>
+                                    <li><b>2: </b>{{ high2 }} </li>
+                                    <li><b>3: </b>{{ high3 }} </li>
+                                </ul>
+                                <div class="row text-center">
+                                    <button class="btn-sm active "><a href="{% url 'subj' %}">View rankings</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card scatter">
+                    <div class="card-header card-pad design">
+
+                    </div>
+                    {% plotly_app name="scatter" ratio=0.4 %}
+                </div>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card scatter">
+                    <div class="card-header card-pad design">
+
+                    </div>
+                    {% plotly_app name="scatter_arts" ratio=0.4 %}
+                </div>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card scatter">
+                    <div class="card-header card-pad design">
+
+                    </div>
+                    {% plotly_app name="scatter_math" ratio=0.4 %}
+                </div>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-4 most">
+                <i class="fas-fa"></i>
+                <h5 class="activey">{{ top }}</h5>
+                <h4 class="activey">Top Student </h4>
+            </div>
+            <div class="col-md-4 text-center most">
+                <div class="card-img">
+                    <i class="fas-fa"></i>
+                    <h5 class="activey text-center">{{ Mean }}</h5>
+                    <h4 class="activey text-center">Class Average</h4>
+                </div>
+            </div>
+            <div class="col-md-4 most">
+                <div class="float-right">
+                    <i class="fas-fa"></i>
+                    <h5 class="activey text-center">{{ Last }}</h5>
+                    <h4 class="activey text-center">Bottom Student</h4>
+                </div>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" style="border: solid 3px #5185f3;">
+                    <div class="card-header card-pad design">Rankings</div>
+                    <div class="card-body">
+                        {% plotly_app name="interactive" ratio=0.95 %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    <script src="{% static "graph_styles/loader.js" %}" rel=stylesheet"></script>
+
+</body>
+</html>

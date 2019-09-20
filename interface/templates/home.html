@@ -1,0 +1,187 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="http://127.0.0.1:8070/im_livechat/external_lib.css"/>
+    <script type="text/javascript" src="http://127.0.0.1:8070/im_livechat/external_lib.js"></script>
+    <script type="text/javascript" src="http://127.0.0.1:8070/im_livechat/loader/7"></script>
+    {% block front %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{% static "fontawesome/css/fontawesome.css" %}" rel="stylesheet">
+    <link href="{% static "fontawesome/css/all.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+    <link href="{% static "home.css" %}" rel="stylesheet"></link>
+    {% endblock %}
+    {% block custom %}
+    {% endblock %}
+    {% block nav %}
+    {% endblock %}
+
+</head>
+
+<body>
+    {% block body %}
+    <section id="fullview">
+        <nav class="navbar navbar-expand-lg " id="ftco-navbar">
+            <div class="container">
+              <a class="navbar-brand" href="index.html"><span>Chambua</span></a>
+              <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+              </button>
+
+              <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+                  <li class="nav-item"><a href="{% url 'home' %}" class="nav-link" data-nav-section="home"><span>Home |</span></a></li>
+                  <li class="nav-item"><a href="{% url 'submit' %}" class="nav-link" data-nav-section="submit"><span>Submission |</span></a></li>
+                  <li class="nav-item"><a href="{% url 'see' %}" class="nav-link" data-nav-section="results"><span>Results |</span></a></li>
+                  <li class="nav-item"><a href="{% url 'login' %}" class="nav-link" data-nav-section="contact"><span>Contact Us</span></a></li>
+
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row nav-text text-center">
+                <div class="col-md-12 wrap">
+                    <h1 class="float-left welcome">WELCOME TO CHAMBUA</h1><br>
+                </div>
+                <p class="edit">An analytical platform for exam results.</p>
+            </div>
+
+        </div>
+    </section>
+    <div class="container">
+        <div class="jumbotron first">
+            <div class="row rowey ">
+                <div class="row">
+                    <div class="col-md-4" >
+                        <div class=" card cardy">
+
+                            <div class="card-body text-center">
+                                <i class="fas fa-signal fa-3x bingo"></i>
+                                <h5 class="text-center">RANKINGS</h5>
+                                <p class="text-center">We love raw data!!<br>Submit and let us help!</p>
+                                <button class="btn-block btn-sm text-center">Go</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" >
+                        <div class="card cardy">
+
+                            <div class="card-body text-center">
+                                <i class="fas fa-chart-pie fa-3x bingo"></i>
+                                <h5 class="text-center">VISUALIZATION</h5>
+                                <p class="text-center">Represent analysed data vissually for easier understanding</p>
+                                <button class="btn-block btn-sm">Go</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" >
+                        <div class=" card cardy">
+                            <div class="card-body text-center">
+                                <i class="fas fa-comments fa-3x bingo"></i>
+                                <h5 class="text-center">RECOMMENDATIONS</h5>
+                                <p class="text-center">Offer recommendations on how best to employ corrective action</p>
+                                <button class="btn-block btn-sm">Go</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 offset-md-4 text-center">
+                <h2 class="text-center">GET STARTED</h2><br>
+                <img src="{% static "images/light.jpeg" %}">
+                <ul class="list-inline list-unstyled text-center">
+                    <li class="list-inline-item"><button class="btn-info  img-thumbnail"><a href="{% url 'login' %}">Log In</a></button></li>
+                    <li class="list-inline-item"><button class="btn-info  img-thumbnail"><a href="{% url 'signup' %}">Sign Up</a></button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row rowe">
+                <h2 class="text-center col-md-4 offset-md-4">ABOUT US</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="bing img-thumbnail" src="{% static "images/exam.jpeg" %}">
+                    </div>
+                    <div class="col-md-6 about">
+                        <p>
+                            Chambua is an online platform that seeks to enable schools and learning institutions
+                            to obtain hidden information about student perfomance by analysis of exam results.Through the
+                            use of modern tools and analytics techniques,Chambua provides a clear, cut through view of what lies
+                            beneath.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            We provide a breakdown of exam results in a way no other platform does, bringing the strengths of analytics
+                            into the education sector.From rankings to creative visualizations on data, our aim is to give learners more
+                            understanding of their abilities.
+                        </p>
+
+                    </div>
+                    <div class="col-md-6">
+                        <img class="bingy img-thumbnail" src="{% static "images/res.jpg" %}">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    <footer>
+        <div class="row ">
+            <div class="col-sm-3 cham ">
+                <h1 class="text-center">Chambua</h1>
+            </div>
+            <div class="col-sm-3 cols ">
+                <h5>Social</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#"><i class="fab fa-facebook icon"></i>Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter-square icon"></i>Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-blogger icon"></i>Blogger</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 cols">
+                <h5>Support</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#"><i class="fas fa-phone icon"></i>Contact</a></li>
+                    <li><a href="#"><i class="fas fa-user-secret icon"></i>Privacy police</a></li>
+                    <li><a href="#"><i class="fas fa-gavel icon"></i>Terms & conditions</a></li>
+                    <li><a href="#"><i class="fas fa-hands-helping icon"></i> Help desk</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 cols">
+                <h5>External Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Infinity Inc</a></li>
+                    <li><a href="#">Plotly</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="{% static "fontawesome/js/fontawesome.js" %}"></script>
+    <script defer src="{% static "fontawesome/js/all.js" %}"></script>
+    <script src="{% static "jquery.js" %}"></script>
+    <script src="{% static "popper.min.js" %}"></script>
+    <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+
+
+</body>
+
+</html>
